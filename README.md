@@ -60,11 +60,11 @@ npx react-native run-ios
 
 ## 📦 Folder Structure
 .
-├── /src
-│   ├── /components       # UI Components\
-│   ├── /screens          # App Screens\
-│   ├── /services         # Supabase client and helpers\
-│   ├── /utils            # Utilities & helpers\
-│   └── /hooks            # Custom hooks\
+├── /src\
+│──├── /components       # UI Components\
+│──├── /screens          # App Screens\
+│──├── /services         # Supabase client and helpers\
+│──├── /utils            # Utilities & helpers\
+│──└── /hooks            # Custom hooks\
 ├── App.tsx               # Entry point\
 └── .env                  # Environment variables\
