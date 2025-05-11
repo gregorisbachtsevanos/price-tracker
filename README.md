@@ -59,7 +59,7 @@ npx react-native run-ios
 ***If using Expo, make sure to install the Expo Go app on your device.***
 
 ## 📦 Folder Structure
-.
+
 ├── /src\
 │──├── /components       # UI Components\
 │──├── /screens          # App Screens\
