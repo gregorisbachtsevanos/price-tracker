@@ -41,6 +41,7 @@ npm install
 - Create a project at supabase.com
 - Copy your project URL and anon public key
 - Create a .env file and add:
+- 
 ```
 SUPABASE_URL=your-supabase-url
 SUPABASE_ANON_KEY=your-anon-key
