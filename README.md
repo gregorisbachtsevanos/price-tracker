@@ -55,6 +55,7 @@ npx expo start
 npx react-native run-android
 npx react-native run-ios
 ```
+
 ***If using Expo, make sure to install the Expo Go app on your device.***
 
 ## 📦 Folder Structure
