@@ -1,11 +1,10 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SupplementProvider } from "@/context/SupplementContext";
-import { ThemeProvider } from "@/hooks/use-theme";
+import { ThemeProvider } from "@/hooks/useTheme";
 
 import Index from "./pages/Index";
 import Calendar from "./pages/Calendar";
@@ -18,27 +17,30 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <ThemeProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <SupplementProvider>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/calendar" element={<Calendar />} />
-              <Route path="/progress" element={<Progress />} />
-              <Route path="/settings" element={<Settings />} />
-              <Route path="/add" element={<AddSupplement />} />
-              <Route path="/edit/:id" element={<EditSupplement />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </SupplementProvider>
-      </TooltipProvider>
-    </ThemeProvider>
-  </QueryClientProvider>
+	<QueryClientProvider client={queryClient}>
+		<ThemeProvider>
+			<TooltipProvider>
+				<Toaster />
+				<Sonner />
+				<SupplementProvider>
+					<BrowserRouter>
+						<Routes>
+							<Route path="/" element={<Index />} />
+							<Route path="/calendar" element={<Calendar />} />
+							<Route path="/progress" element={<Progress />} />
+							<Route path="/settings" element={<Settings />} />
+							<Route path="/add" element={<AddSupplement />} />
+							<Route
+								path="/edit/:id"
+								element={<EditSupplement />}
+							/>
+							<Route path="*" element={<NotFound />} />
+						</Routes>
+					</BrowserRouter>
+				</SupplementProvider>
+			</TooltipProvider>
+		</ThemeProvider>
+	</QueryClientProvider>
 );
 
 export default App;
