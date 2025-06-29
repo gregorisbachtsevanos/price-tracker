@@ -1,5 +1,4 @@
 # 🧴 SuppWise
-
 A cross-platform mobile application built with **React Native** and **Supabase** to help users **track and manage their supplement intake**, set **reminders**, and monitor **consistency over time**.
 
 ## 📱 Features
