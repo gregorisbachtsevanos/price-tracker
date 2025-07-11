@@ -23,7 +23,7 @@ A cross-platform mobile application built with **React Native** and **Supabase**
 
 ## ⚙️ Setup Instructions
 
-1. **Clone the repository:**
+1. Clone the repository:
 
 ```
 git clone https://github.com/gregorisbachtsevanos/SuppWise.git
