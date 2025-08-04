@@ -4,9 +4,11 @@ from .price_fetcher import get_all_prices
 from .notifier import send_email, send_telegram
 from .logger import log_alert
 from . import config
+from .config import load_assets
 
 def check_prices():
-    prices = get_all_prices(config.ASSETS)
+    assets = load_assets()
+    prices = get_all_prices(assets)
 
     for symbol, meta in config.ASSETS.items():
         price = prices.get(symbol)
