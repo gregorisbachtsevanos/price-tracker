@@ -1,8 +1,9 @@
 import schedule
 import time
-from price_fetcher import get_all_prices
-from notifier import send_email, send_telegram
-import config
+from .price_fetcher import get_all_prices
+from .notifier import send_email, send_telegram
+from .logger import log_alert
+from . import config
 
 def check_prices():
     prices = get_all_prices(config.ASSETS)
@@ -18,17 +19,21 @@ def check_prices():
 
         if price < threshold:
             msg = f"[ALERT] {symbol.upper()} ({meta['type'].upper()}) dropped below {threshold}.\nCurrent: {price} {meta['currency'].upper()}"
-            
+
             if config.ENABLE_EMAIL:
                 send_email(f"{symbol.upper()} Alert", msg, config.TO_EMAIL)
             if config.ENABLE_TELEGRAM:
                 send_telegram(msg)
 
-schedule.every(1).hours.do(check_prices)
+            log_alert(symbol, meta["type"], price, threshold, meta["currency"])
 
-if __name__ == "__main__":
-    print("Tracker running every hour for crypto, stocks, ETFs, and forex...")
+def run_once():
     check_prices()
+
+def start_scheduler():
+    print("Running every 1 hour...")
+    check_prices()
+    schedule.every(1).hours.do(check_prices)
     while True:
         schedule.run_pending()
         time.sleep(1)
