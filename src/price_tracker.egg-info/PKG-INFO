@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: price_tracker
+Version: 0.1
+Requires-Dist: click
+Requires-Dist: schedule
+Requires-Dist: requests
+Requires-Dist: textual
+Requires-Dist: rich
+Requires-Dist: python-dotenv
+Dynamic: requires-dist

@@ -2,17 +2,20 @@ from setuptools import setup, find_packages
 
 setup(
     name='price_tracker',
-    version='1.0.0',
-    packages=find_packages(),
-    install_requires=[
-        'requests',
-        'python-dotenv',
-        'schedule',
-        'yfinance',
-    ],
+    version='0.1',
+    package_dir={"": "src"},
+    packages=find_packages(where="src"),
     entry_points={
         'console_scripts': [
-            'price-tracker=price_tracker.cli:main'
+            'price-tracker=price_tracker.cli:main',
         ],
     },
+    install_requires=[
+        'click',
+        'schedule',
+        'requests',
+        'textual',
+        'rich',
+        'python-dotenv',
+    ],
 )
