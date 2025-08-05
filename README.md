@@ -157,5 +157,3 @@ docker run -d --restart unless-stopped --env-file .env price-tracker start
 ```
 
 _Logs and alerts are saved inside the container unless mounted._
-
-CLI Usage
