@@ -91,7 +91,7 @@ price-tracker add --symbol EURUSD=X --type forex --currency usd --threshold 1.1
 
 ##### List Tracked Assets
 
-`price-tracker list`
+```price-tracker list```
 
 ```
 Currently tracked assets:
