@@ -64,9 +64,7 @@ ENABLE_TELEGRAM = True
 
 ### Once installed (or inside Docker), you can use the CLI:
 
-```
-price-tracker <command> [options]
-```
+```price-tracker <command> [options]```
 
 #### Available Commands
 
